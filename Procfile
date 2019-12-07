@@ -1,1 +1,1 @@
-web: gunicorn app:fork
+web: gunicorn fork:app
