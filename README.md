@@ -20,7 +20,7 @@ I feel PUT more accurately reflects the current nature of the service.
 
 Also note, Idempotent is not the same as safe. A safe method has no side-effects. This service however, most certainly has a side-effect (forking a repo). 
 
-Update: Of course. The PUT method isn't support by HTML the form method attribute. 
+Update: The PUT method isn't supporteded by the HTML form method attribute. Of course, that would be too easy. 
 Ultimately the code could use Javascript to submit the form with PUT using XMLHttpRequest, but for the sake of simplicity and time, I'll leave this as an exercise to the viewer. :D
 
 Deploy Instructions ====================================
@@ -31,7 +31,7 @@ Refer to fork.py for more details on their usage.
 Deployment is otherwise straightforward.
 
 Heroku Deployment:
-Below are instruction for deploying to a free tier Heroku account.
+Below are instructions for deploying to a free tier Heroku account.
 
 0) Checkout this code to your local machine if you haven't done so already
 
