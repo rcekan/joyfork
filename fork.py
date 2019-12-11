@@ -31,8 +31,9 @@ def index():
     html = """
         <h1>Hello. So you want to fork?</h1>
         <p>You are @{uname} on GitHub.</p>
-        <form method="PUT" action="/fork">
+        <form method="POST" action="/fork">
         <p>Please enter the username and repository that you would like to fork.</p>
+        <input type="hidden" name="_method" value="PUT">
         <label for="username">Username: <input type="input" name="username">
         <label for="repository">Repository: <input type="input" name="repository">
         <input type="submit" value="Fork">
@@ -40,7 +41,7 @@ def index():
         """
     return html.format(uname=username)
 
-@app.route('/fork', methods=['PUT']) 
+@app.route('/fork', methods=['POST','PUT']) 
 def fork():
     """Endpoint for fork service. 
     Service is idempotent; can be called multiple times in the event of a time-out or transmission error."""

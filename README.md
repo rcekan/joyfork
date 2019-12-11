@@ -20,6 +20,8 @@ I feel PUT more accurately reflects the current nature of the service.
 
 Also note, Idempotent is not the same as safe. A safe method has no side-effects. This service however, most certainly has a side-effect (forking a repo). 
 
+Update: Of course. The PUT method isn't support by HTML the form method attribute. 
+Ultimately the code could use Javascript to submit the form with PUT using XMLHttpRequest, but for the sake of simplicity and time, I'll leave this as an exercise to the viewer. :D
 
 Deploy Instructions ====================================
 
