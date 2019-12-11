@@ -1,6 +1,26 @@
 # joyfork
 Github fork service for Healthjoy coding assessment. 
 
+
+GOAL ==================================================
+
+Write a web service which provides an endpoint that a user can trigger from within a web browser.
+Endpoint should respond only to safe HTTP methods. (i.e., POST/PUT/PATCH)
+Please explain your decision of choosing a HTTP method.
+By triggering the endpoint service, a user can fork it's own Github repo to the user’s account.
+
+
+Solution ==============================================
+
+Will use PUT. Idempotent in nature. Eg, we can call many times, if it times out, no problem. Just call again.
+Note: Github API docs specify using POST to create a fork. https://developer.github.com/v3/repos/forks/
+However after testing, there are no additional side-effects when called multiple times. 
+While it is possible the Github API may change at any time and doesn't guarantee idempotent behavior for forking, 
+I feel PUT more accurately reflects the current nature of the service. 
+
+Also note, Idempotent is not the same as safe. A safe method has no side-effects. This service however, most certainly has a side-effect (forking a repo). 
+
+
 Deploy Instructions ====================================
 
 Code requires the following environment variables to be defined:
