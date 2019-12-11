@@ -39,6 +39,8 @@ Using the oauth registration from step #2, along with the Heroku app name from s
 $ heroku config:set FLASK_SECRET=anything_you_want GITHUB_CLIENT_ID=xxxxxxxxxxxxxxxxxxx GITHUB_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -app your_heroku_appname
 
 For local testing, don't forget to set environment variables locally!
+Oh yes, and you must add this tricky variable as well for local testing (without https): 
+$ export OAUTHLIB_INSECURE_TRANSPORT=true
 
 6) Push code to Heroku
 $ git push heroku master
