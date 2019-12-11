@@ -30,7 +30,7 @@ FLASK_SECRET, GITHUB_CLIENT_ID, and GITHUB_CLIENT_SECRET (instructions below, do
 Refer to fork.py for more details on their usage.
 Deployment is otherwise straightforward.
 
-Heroku Deployment --------------------------------------
+Heroku Deployment:
 Below are instruction for deploying to a free tier Heroku account.
 
 0) Checkout this code to your local machine if you haven't done so already
